@@ -92,7 +92,6 @@ def Export(workspace, net, params):
 
     # Now we make input/output_blobs line up with what Predictor expects.
     del predict_net.external_input[:]
-    predict_net.external_input.extend(input_blobs)
     # For populating weights
     predict_net.external_input.extend(proto.external_input)
     # Ensure the output is also consistent with what we want
